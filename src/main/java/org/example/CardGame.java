@@ -1,12 +1,17 @@
 package org.example;
 
-public class CardGame {
+import java.util.ArrayList;
+
+public class CardGame { //defined the instance vars - what we need for our deck of cards
+        protected ArrayList<Card> deckOfCards; //a List of Arrays that will store Card objts - can be accessed by subcla
+        private String name; //stores name of game
+
+    public CardGame(String name) { //constructor
+        this.name = name;
+        deckOfCards = new ArrayList<>();} //a new empty ArrList<Card> - when game starts, deck is ready to be filled
+
+
+}//end of class definition
 
 
 
-
-    {"\u2665Heart", \u2663 "Club", \u2666 "Diamond", \u2660 "Spade"};
-    { "2","3","4","5","6","7","8","9","10","J","Q","K","A"};
-    {2,3,4,5,6,7,8,9,10,11,12,13,14};
-
-}
