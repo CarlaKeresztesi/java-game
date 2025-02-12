@@ -13,6 +13,11 @@ public class Main {
 
         System.out.println("Welcome to \u2665 \u2663 \u2666 \u2660 Snap \u2665 \u2663 \u2666 \u2660!");
 
+        CardGame myGame = new CardGame("Snap");
+
+        ArrayList<Card> deck = myGame.getDeckOfCards(); //calling the method in CardGame to get a deck of cards
+
+        System.out.println("The deck contains: " + deck.size() + " cards.");  // Print the game name
 
 
 
