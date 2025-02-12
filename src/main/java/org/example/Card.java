@@ -24,9 +24,13 @@ public class Card { //making fields private so they can't be modified from outsi
         return value;
     }
 
+    @Override //we Override the Object - parent class - to use a customised Card obj representation
+    public String toString() { //toString() returns a String representation of an Object,
+        return symbol + " of " + suit;  //to describe the card in a readable way
+    }
 
 
-}//end of class definition
+    }//end of class definition
 
 
 
