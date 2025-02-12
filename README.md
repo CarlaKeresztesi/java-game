@@ -15,6 +15,7 @@ and user interaction.
 
 3. Open the project in IntelliJ IDEA - 
 
+## Features
 
 
 ## Project Requisites
@@ -40,7 +41,13 @@ and user interaction.
 
 ### **Stage 2** - core functionality
 
-
+-   [ ] card dealCard() - takes the card from the top of the deck and returns it;
+-   [ ] ArrayList<Card> sortDeckInNumberOrder() - sorts the deck in number order and stores
+    the new shuffled deck back into the deckOfCards attribute;
+-   [ ] ArrayList<Card> sortDeckIntoSuits() - sorts the deck into suits and stores the new
+    shuffled deck back into the deckOfCards attribute;
+-   [ ] ArrayList<Card> shuffleDeck() - shuffles the deck into a random order and stores the new shuffled deck back into
+    the deckOfCards attribute;
 
 ### **Stage 3**
 
@@ -64,7 +71,7 @@ and user interaction.
 -   [ ]
 -   [ ]
 
-## Features
+
 
 
 
