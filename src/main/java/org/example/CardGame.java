@@ -25,6 +25,12 @@ private void createDeck() {//can only be used inside this class and doesn't retu
     }                                  //add each card to the deck
 }
 
+    public ArrayList<Card> getDeckOfCards() {//will return an ArrayList of Card objects = a list of cards
+        return deckOfCards; //using get to retrieve the value of a private instance variable
+    } //Encapsulation - deckOfCards is protected - can only be accessed directly within the CardGame class
+  //To allow other parts of the program to get the deck (without modifying it directly), a getter method like getDeck().
+    // By using a getter method - controlled access to the deckOfCards, while keeping it encapsulated inside the class.
+
 
 }//end of class definition
 
