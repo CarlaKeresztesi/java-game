@@ -18,6 +18,12 @@ public class Main {
         ArrayList<Card> deck = myGame.getDeckOfCards(); //calling the method in CardGame to get a deck of cards
 
         System.out.println("The deck contains: " + deck.size() + " cards.");  // Print the game name
+//***********************************************************************************************************
+
+        CardGame game = new CardGame("Snap!");
+
+        System.out.println(game.dealCard());
+
 
 
 
