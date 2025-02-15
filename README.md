@@ -58,25 +58,24 @@ submit the word “snap” in order to win (and the game ends). If they don’t 
 
 ### **Stage 3**
 
--   [ ]
--   [ ]
--   [ ]
--   [ ]
--   [ ]
--   [ ]
--   [ ]
+-   [ ] create a class for Snap that extends CardGame.  This class should use the methods defined above, as well as 
+some new ones, to enable the user to play the game "Snap" according to the following rules:
+-   [ ] by pressing ENTER in the command line, the user takes their turn;
+-   [ ] each turn, a new card is dealt from the deck;
+-   [ ] the game continues until two cards in a row have the same symbol, at which point the “player” wins and 
+the game ends.
+-   [ ] create constructor method for Snap class;
+-   [ ] add scanner for user input;
 -   [ ]
 
 ### **Stage 4**
 
--   [ ]
--   [ ]
--   [ ]
--   [ ]
--   [ ]
--   [ ]
--   [ ]
--   [ ]
+-   [ ] create a Player class;
+-   [ ] enable the snap game to be two players, with the users taking it in turns to go;
+-   [ ] if the snap occurs on the user's turn, they win;
+-   [ ] add a timer so that when there is a snap opportunity, the player has 2 seconds to submit the word “snap” in 
+order to win. If they don’t type it in time, they lose.
+
 
 
 

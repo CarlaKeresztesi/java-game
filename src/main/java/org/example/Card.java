@@ -36,4 +36,3 @@ public class Card { //making fields private so they can't be modified from outsi
 
 
 
-
