@@ -15,7 +15,14 @@ and user interaction.
 
 3. Open the project in IntelliJ IDEA - 
 
-## Features
+## Rules
+
+● By pressing Enter in the command line, the user takes their turn.
+
+● Each turn, a new card is dealt from the deck.
+
+● The game continues until two cards in a row have the same symbol, at which point the “player” has 2 seconds to 
+submit the word “snap” in order to win (and the game ends). If they don’t type it in time, they lose and the game ends.
 
 
 ## Project Requisites
@@ -41,12 +48,12 @@ and user interaction.
 
 ### **Stage 2** - core functionality
 
--   [ ] card dealCard() - takes the card from the top of the deck and returns it;
--   [ ] ArrayList<Card> sortDeckInNumberOrder() - sorts the deck in number order and stores
+-   [x] card dealCard() - takes the card from the top of the deck and returns it;
+-   [x] ArrayList<Card> sortDeckInNumberOrder() - sorts the deck in number order and stores
     the new shuffled deck back into the deckOfCards attribute;
--   [ ] ArrayList<Card> sortDeckIntoSuits() - sorts the deck into suits and stores the new
+-   [x] ArrayList<Card> sortDeckIntoSuits() - sorts the deck into suits and stores the new
     shuffled deck back into the deckOfCards attribute;
--   [ ] ArrayList<Card> shuffleDeck() - shuffles the deck into a random order and stores the new shuffled deck back into
+-   [x] ArrayList<Card> shuffleDeck() - shuffles the deck into a random order and stores the new shuffled deck back into
     the deckOfCards attribute;
 
 ### **Stage 3**

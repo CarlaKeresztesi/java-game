@@ -2,31 +2,56 @@ package org.example;
 
 import java.util.ArrayList;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("\u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660");
+        System.out.println("\u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660");
 
         System.out.println("Hello, Friend!");
 
-        System.out.println("Welcome to \u2665 \u2663 \u2666 \u2660 Snap \u2665 \u2663 \u2666 \u2660!");
+        System.out.println("\nWelcome to \u2665 \u2663 \u2666 \u2660 Snap \u2665 \u2663 \u2666 \u2660!");
 
-        CardGame myGame = new CardGame("Snap");
+        CardGame game = new CardGame();
+        ArrayList<Card> deck = game.getDeckOfCards(); //calling the method in CardGame to get a deck of cards
 
-        ArrayList<Card> deck = myGame.getDeckOfCards(); //calling the method in CardGame to get a deck of cards
-
-        System.out.println("The deck contains: " + deck.size() + " cards.");  // Print the game name
+       // System.out.println("\nThe deck contains: " + deck.size() + " cards.");
 //***********************************************************************************************************
 
-        CardGame game = new CardGame("Snap!");
+     //   CardGame game = new CardGame();
 
-        System.out.println(game.dealCard());
+      //  System.out.println(game.dealCard());
+
+//         System.out.println("\nYour deck of cards: ");
+//         game.printDeck(); // - working
+
+//         game.sortDeckInNumberOrder();
+//         System.out.println("Sorted in numerical order"); // - working
+//         game.printDeck();
+
+//            game.sortDeckIntoSuits(); // - working
+//            for(Card card : game.deckOfCards) {
+//                System.out.println(card);
+//            }
+
+        System.out.println("Deck before shuffling: ");
+        for(Card card : game.getDeckOfCards()) {
+            System.out.println(card);
+        }
+        game.shuffleDeck();
+        System.out.println("\nDeck after shuffling: ");
+        for (Card card: game.getDeckOfCards()) {
+            System.out.println(card);
+        }
 
 
 
 
 
+
+
+
+
+
+        System.out.println("\n\u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660");
     }//end of main
 }
