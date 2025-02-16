@@ -69,14 +69,16 @@ submit the word “snap” in order to win (and the game ends). If they don’t 
 
 -   [x] create a class for Snap that extends CardGame.  This class should use the methods defined above, as well as <br>
 some new ones, to enable the user to play the game "Snap" according to the following rules:
--   [ ] by pressing ENTER in the command line, the user takes their turn;
--   [ ] each turn, a new card is dealt from the deck;
--   [ ] the game continues until two cards in a row have the same symbol, at which point the “player” wins and 
-the game ends.
+-   [x] by pressing ENTER in the command line, the user takes their turn;
+-   [x] each turn, a new card is dealt from the deck;
+-   [x] the game continues until two cards in a row have the same symbol, at which point the “player” wins if they type
+'snap' and the game ends. If user doesn't type 'snap', game continues.
 -   [x] create constructor method for Snap class;
 -   [x] add scanner within constructor of Snap for user input;
 -   [x] call shuffleDeck() within constructor of Snap;
 -   [x] initialize previousCard to null at every start of the game; 
+-   [x] call scanner to read userInput, ignoring case sensitivity.
+
 
 ### **Stage 4**
 
