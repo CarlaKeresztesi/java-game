@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import org.example.Card;
 
-public class CardGame { //defined the instance vars - what we need for our deck of cards
+public class CardGame { //defines the instance vars - what we need for our deck of cards
     protected ArrayList<Card> deckOfCards; //a List of Arrays that will store Card objts - can be accessed by subclass
 
     public CardGame() { //constructor
@@ -28,9 +28,11 @@ public class CardGame { //defined the instance vars - what we need for our deck 
 
     public ArrayList<Card> getDeckOfCards() {//will return an ArrayList of Card objects = a list of cards
         return deckOfCards; //using get to retrieve the value of a private instance variable
-    } //Encapsulation - deckOfCards is protected - can only be accessed directly within the CardGame class
-    //To allow other parts of the program to get the deck (without modifying it directly), we use a getter method getDeck().
-    // By using a getter method - controlled access to the deckOfCards, while keeping it encapsulated inside the class.
+    }                       //Encapsulation - deckOfCards is protected - can only be accessed directly within the
+                            // CardGame class. To allow other parts of the program to get the deck (without modifying
+                            // it directly), we use a getter method getDeck().
+                            // By using a getter method - controlled access to the deckOfCards, while keeping it
+                            // encapsulated inside the class.
 
     //Deal a card from the deck
     public Card dealCard() {
@@ -43,25 +45,22 @@ public class CardGame { //defined the instance vars - what we need for our deck 
         }
     }
 
-    //Sort deck in number order
+    //Sort deck in number order - using lambda function
     public void sortDeckInNumberOrder() {
         deckOfCards.sort((a, b) -> a.getValue() - b.getValue());  //sorting based on numerical value
         // deckOfCards.sort(Comparator.comparingInt(Card::getValue));
 
     }
 
-    //Sort deck into suits
+    //Sort deck into suits - using method references
     public void sortDeckIntoSuits() {
-        //sorting based on suits and then on value using method references
         deckOfCards.sort(Comparator.comparing(Card::getSuit).thenComparingInt(Card::getValue));
     }
 
-    //Shuffle the deck
+    //Shuffle the deck - using the root interface of Java collection classes
     public void shuffleDeck() {
         Collections.shuffle(deckOfCards);
     }
-
-
 
     //Deck printing method
     public void printDeck() {

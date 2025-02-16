@@ -33,16 +33,20 @@ public class Main {
 //                System.out.println(card);
 //            }
 
-        System.out.println("Deck before shuffling: ");
-        for(Card card : game.getDeckOfCards()) {
-            System.out.println(card);
-        }
-        game.shuffleDeck();
-        System.out.println("\nDeck after shuffling: ");
-        for (Card card: game.getDeckOfCards()) {
-            System.out.println(card);
-        }
+//        System.out.println("Deck before shuffling: ");
+//        for(Card card : game.getDeckOfCards()) {
+//            System.out.println(card);
+//        }
+//
+//        game.shuffleDeck();
+//
+//        System.out.println("\nDeck after shuffling: ");
+//        for (Card card: game.getDeckOfCards()) {
+//            System.out.println(card);
+//        }
 
+        Snap snapGame = new Snap(); //instance of Snap
+        snapGame.playSnap(); //calling the method
 
 
 

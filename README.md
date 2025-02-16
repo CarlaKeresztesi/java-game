@@ -1,7 +1,7 @@
 # Snap card game
 
-A fun and interactive game built with Java! This project showcases object-oriented programming principles, game logic, 
-and user interaction.
+&nbsp;&nbsp;&nbsp;&nbsp; A fun and interactive game built with Java! This project showcases object-oriented programming 
+principles, game logic, and user interaction. 
 
 
 
@@ -9,23 +9,33 @@ and user interaction.
 
 1. Clone the repository using Bash or the terminal emulator in your IntelliJ IDEA:
 
-   git clone https://github.com/CarlaKeresztesi/java-game.git
+   git clone <a href="https://github.com/CarlaKeresztesi/java-game.git" target="_blank">Snap repo</a>
 
 2. Navigate to the project folder using the cd command
 
-3. Open the project in IntelliJ IDEA - 
+3. Open the project in IntelliJ IDEA 
 
-## Rules
+4. Ensure your SDK is set to a valid Java version (like 21.0.6), otherwise add your installed JDK
+
+5. Locate the Main method and click on the green Run triangle
+
+6. The Console will open at the bottom of IntelliJ showing the output of the game.
+
+7. Follow the prompts and play <ins>Snap!</ins>
+
+
+# Rules
 
 ● By pressing Enter in the command line, the user takes their turn.
 
 ● Each turn, a new card is dealt from the deck.
 
 ● The game continues until two cards in a row have the same symbol, at which point the “player” has 2 seconds to 
+
 submit the word “snap” in order to win (and the game ends). If they don’t type it in time, they lose and the game ends.
 
 
-## Project Requisites
+# Project Requisites
 (**Stage 1** and **Stage 2** are the building blocks for any card game.)
 
 -   [x] print greeting and welcome message;
@@ -40,13 +50,12 @@ submit the word “snap” in order to win (and the game ends). If they don’t 
 -   [x] getDeck() method that lists out the cards in the deck;
 
 -   [x] create Card class;
--   [x] has a String suit - use the Unicode characters of heart♥(\u2665), club♣(\u2663), diamond♦ (\u2666) and 
- spade ♠ (\u2660);
+-   [x] has a String suit - use the Unicode characters of Heart♥, Club♣, Diamond♦ and Spade ♠;
 -   [x] has a String symbol (2,3,4,5,6,7,8,9,10,J,Q,K,A);
 -   [x] has an int value (2,3,4,5,6,7,8,9,10,11,12,13,14);
 -   [x] has a toString() method that describes the class;
 
-### **Stage 2** - core functionality
+### **Stage 2** 
 
 -   [x] card dealCard() - takes the card from the top of the deck and returns it;
 -   [x] ArrayList<Card> sortDeckInNumberOrder() - sorts the deck in number order and stores
@@ -58,15 +67,16 @@ submit the word “snap” in order to win (and the game ends). If they don’t 
 
 ### **Stage 3**
 
--   [ ] create a class for Snap that extends CardGame.  This class should use the methods defined above, as well as 
+-   [x] create a class for Snap that extends CardGame.  This class should use the methods defined above, as well as <br>
 some new ones, to enable the user to play the game "Snap" according to the following rules:
 -   [ ] by pressing ENTER in the command line, the user takes their turn;
 -   [ ] each turn, a new card is dealt from the deck;
 -   [ ] the game continues until two cards in a row have the same symbol, at which point the “player” wins and 
 the game ends.
--   [ ] create constructor method for Snap class;
--   [ ] add scanner for user input;
--   [ ]
+-   [x] create constructor method for Snap class;
+-   [x] add scanner within constructor of Snap for user input;
+-   [x] call shuffleDeck() within constructor of Snap;
+-   [x] initialize previousCard to null at every start of the game; 
 
 ### **Stage 4**
 
@@ -74,7 +84,7 @@ the game ends.
 -   [ ] enable the snap game to be two players, with the users taking it in turns to go;
 -   [ ] if the snap occurs on the user's turn, they win;
 -   [ ] add a timer so that when there is a snap opportunity, the player has 2 seconds to submit the word “snap” in 
-order to win. If they don’t type it in time, they lose.
+order to win. <br> If they don’t type it in time, they lose.
 
 
 
