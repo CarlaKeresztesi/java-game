@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import org.example.Card;
+import java.util.Scanner;
 
-public class CardGame { //defines the instance vars - what we need for our deck of cards
+public abstract class CardGame { //defines the instance vars - what we need for our deck of cards
     protected ArrayList<Card> deckOfCards; //a List of Arrays that will store Card objts - can be accessed by subclass
+    protected Scanner scanner = new Scanner(System.in);
 
     public CardGame() { //constructor
         deckOfCards = new ArrayList<>(); //a new empty ArrList<Card> - when game starts, deck is ready to be filled
@@ -65,11 +67,21 @@ public class CardGame { //defines the instance vars - what we need for our deck 
         }
     }
 
+    //Prompt method - to ask user to play again - if game over or win
+    protected void promptPlayAgain() {
+        System.out.println("\nWould you like to play again?\uD83D\uDE00 \nType 'yes' to restart or 'exit' to quit.");
+        String response = scanner.nextLine().trim().toLowerCase();
+        if (response.equals("yes")) {
+            resetGame();
+        } else {
+            System.out.println("Thanks for playing! Bye Bye! \uD83D\uDC4B");
+            scanner.close();
+            System.exit(0);
+        }
 
+    }//end of promptPlayAgain()
 
-
-
-
-
+    //Reset method
+    protected abstract void resetGame();
 
 }//end of class definition

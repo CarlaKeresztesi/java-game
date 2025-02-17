@@ -3,7 +3,6 @@ package org.example;
 import java.util.Scanner;
 
 public class Snap extends CardGame {
-    private Scanner scanner;
     private Card previousCard;
     private Player player1, player2;
     private boolean isPlayerOneTurn;
@@ -14,7 +13,6 @@ public class Snap extends CardGame {
         super(); //calling the constructor of the parent class - CardGame
         this.player1 = player1;
         this.player2 = player2;
-        this.scanner = new Scanner(System.in); //a new Scanner obj created to take input from console
         shuffleDeck(); //calling this method from CardGame when the game starts
         previousCard = null; //as we are starting the game, there is no previous card so setting it to null
         gameOver = false;
@@ -51,15 +49,19 @@ public class Snap extends CardGame {
                 System.out.println("\n\uD83E\uDEF0Snap!\uD83E\uDEF0 " + currentPlayer.getName() + ", type 'snap' within 2 seconds to win the game!");
 
                 long startTime = System.currentTimeMillis();//start timer
+                String userInput = "";
 
-                while (System.currentTimeMillis() - startTime <= 2000 && !scanner.hasNextLine()) { //waits for user input
-                    String userInput = scanner.nextLine(); //capturing user input
+                while (System.currentTimeMillis() - startTime <= 2000) {
+                    if (scanner.hasNextLine()) {
+                        userInput = scanner.nextLine();
+                        break;
+                    }
                 }
 
                 if ((System.currentTimeMillis() - startTime) > 2000) {
                     System.out.println("\nToo slow!\uD83E\uDDA5 Game Over!\uD83D\uDED1");
                     return;
-                } else if (currentPlayer.declareSnap("snap")) {
+                } else if (currentPlayer.declareSnap(userInput)) {
                     System.out.println("✨✨✨ " + currentPlayer.getName() + " won\uD83E\uDD47\uD83C\uDFC6!!✨✨✨");
                     return;
                 } else {
@@ -77,8 +79,16 @@ public class Snap extends CardGame {
 
         }//end of while loop
 
-
+        promptPlayAgain();
 
     }//end of playSnap()
+
+    @Override
+    protected void resetGame() {
+    gameOver = false;
+    previousCard = null;
+    shuffleDeck();
+    playSnap();
+    }
 
 }//end of Snap class
