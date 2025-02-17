@@ -1,16 +1,32 @@
 package org.example;
+
 import java.util.Scanner;
 
 public class Snap extends CardGame {
 
     private Scanner scanner;
     private Card previousCard;
+    private Player player1, player2;
+    private boolean isPlayerOneTurn;
+    private boolean gameOver;
+
 
     public Snap() { //constructor overloading
         super(); //calling the constructor of the parent class - CardGame
+        this.player1 = player1;
+        this.player2 = player2;
         this.scanner = new Scanner(System.in); //a new Scanner obj created to take input from console
         shuffleDeck(); //calling this method from CardGame when the game starts
         previousCard = null; //as we are starting the game, there is no previous card so setting it to null
+        gameOver = false;
+        this.isPlayerOneTurn = true;
+
+        System.out.println("\n\u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660");
+
+        System.out.println("\nHello, Friend!");
+
+        System.out.println("\nWelcome to \u2665 \u2663 \u2666 \u2660 Snap \u2665 \u2663 \u2666 \u2660!");
+
     }//end of constructor
 
     //Method to play Snap
