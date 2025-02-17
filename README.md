@@ -82,10 +82,10 @@ some new ones, to enable the user to play the game "Snap" according to the follo
 
 ### **Stage 4**
 
--   [ ] create a Player class;
--   [ ] enable the snap game to be two players, with the users taking it in turns to go;
--   [ ] if the snap occurs on the user's turn, they win;
--   [ ] add a timer so that when there is a snap opportunity, the player has 2 seconds to submit the word “snap” in 
+-   [x] create a Player class;
+-   [x] enable the snap game to be two players, with the users taking it in turns to go;
+-   [x] if the snap occurs on the user's turn, they win;
+-   [x] add a timer so that when there is a snap opportunity, the player has 2 seconds to submit the word “snap” in 
 order to win. <br> If they don’t type it in time, they lose.
 
 

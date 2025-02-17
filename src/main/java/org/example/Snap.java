@@ -51,7 +51,7 @@ public class Snap extends CardGame {
                 long startTime = System.currentTimeMillis();//start timer
                 String userInput = "";
 
-                while (System.currentTimeMillis() - startTime <= 2000) {
+                while (System.currentTimeMillis() - startTime <= 2000) { //waits for user to input text in 2secs
                     if (scanner.hasNextLine()) {
                         userInput = scanner.nextLine();
                         break;
@@ -60,12 +60,15 @@ public class Snap extends CardGame {
 
                 if ((System.currentTimeMillis() - startTime) > 2000) {
                     System.out.println("\nToo slow!\uD83E\uDDA5 Game Over!\uD83D\uDED1");
+                    promptPlayAgain();
                     return;
                 } else if (currentPlayer.declareSnap(userInput)) {
                     System.out.println("✨✨✨ " + currentPlayer.getName() + " won\uD83E\uDD47\uD83C\uDFC6!!✨✨✨");
+                    promptPlayAgain();
                     return;
                 } else {
                     System.out.println("Incorrect input! Game Over!\uD83D\uDED1");
+                    promptPlayAgain();
                     return;
                 }
 
