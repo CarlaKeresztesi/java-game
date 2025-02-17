@@ -32,28 +32,46 @@ public class Snap extends CardGame {
     //Method to play Snap
     public void playSnap() {
 
-        while (true) {
-            System.out.println("Press Enter to deal a card");
+        while (!gameOver) {
+
+            Player currentPlayer = Player.getCurrentPlayer(isPlayerOneTurn, player1, player2);
+            currentPlayer.setPlaying(true);
+            System.out.println("\n " + currentPlayer.getName() + " is playing!\uD83E\uDE84 Press Enter to deal a card");
+
             scanner.nextLine();//method of Scanner class that reads an entire line of text from console until the user
                                                                         //presses Enter
             Card currentCard = dealCard();
             System.out.println("The current card is: " + currentCard);
 
             if (previousCard != null && currentCard.getSymbol().equals(previousCard.getSymbol())) {
-                System.out.println("Snap! Print the word 'snap' to win the game!");
-                String userInput = scanner.nextLine(); //waits for user input
+                System.out.println("\n\uD83E\uDEF0Snap!\uD83E\uDEF0 " + currentPlayer.getName() + ", type 'snap' within 2 seconds to win the game!");
 
-                if ("snap".equalsIgnoreCase(userInput)) { //check if the string is = userInput, ignoring case sensitivity
-                    System.out.println("✨✨✨You won!!");
-                    System.exit(0); //ends game if 'snap' typed correctly
-                } else {
-                    System.out.println("Wrong input. Game on!");
+                long startTime = System.currentTimeMillis();//start timer
+
+                while (System.currentTimeMillis() - startTime <= 2000 && !scanner.hasNextLine()) { //waits for user input
+                    String userInput = scanner.nextLine(); //capturing user input
                 }
+
+                if ((System.currentTimeMillis() - startTime) > 2000) {
+                    System.out.println("\nToo slow!\uD83E\uDDA5 Game Over!\uD83D\uDED1");
+                    return;
+                } else if (currentPlayer.declareSnap("snap")) {
+                    System.out.println("✨✨✨ " + currentPlayer.getName() + " won\uD83E\uDD47\uD83C\uDFC6!!✨✨✨");
+                    return;
+                } else {
+                    System.out.println("Incorrect input! Game Over!\uD83D\uDED1");
+                    return;
+                }
+
             } else {
-                System.out.println("No Snap! Game continues...");
+                System.out.println("No Snap! Game continues... \uD83E\uDE84");
+
                 //update previousCard for the next turn:
                 previousCard = currentCard; //store the current card as previous for next turn
+                isPlayerOneTurn = !isPlayerOneTurn; //switch to player2
             }
+
         }//end of while loop
+
     }//end of playSnap()
 }//end of Snap class
