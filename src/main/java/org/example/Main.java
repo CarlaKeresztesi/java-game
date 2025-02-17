@@ -5,14 +5,9 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("\u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660");
 
-        System.out.println("Hello, Friend!");
-
-        System.out.println("\nWelcome to \u2665 \u2663 \u2666 \u2660 Snap \u2665 \u2663 \u2666 \u2660!");
-
-        CardGame game = new CardGame();
-        ArrayList<Card> deck = game.getDeckOfCards(); //calling the method in CardGame to get a deck of cards
+//        CardGame game = new CardGame();
+//        ArrayList<Card> deck = game.getDeckOfCards(); //calling the method in CardGame to get a deck of cards
 
        // System.out.println("\nThe deck contains: " + deck.size() + " cards.");
 //***********************************************************************************************************
@@ -45,17 +40,14 @@ public class Main {
 //            System.out.println(card);
 //        }
 
-        Snap snapGame = new Snap(); //instance of Snap
-        snapGame.playSnap(); //calling the method
+//        Snap snapGame = new Snap(); //instance of Snap
+//        snapGame.playSnap(); //calling the method
 
 
 
 
 
 
-
-
-
-        System.out.println("\n\u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660");
+        System.out.println("\n\u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660  \u2665  \u2663  \u2666  \u2660");
     }//end of main
 }

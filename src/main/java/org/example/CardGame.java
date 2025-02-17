@@ -27,12 +27,8 @@ public class CardGame { //defines the instance vars - what we need for our deck 
     }
 
     public ArrayList<Card> getDeckOfCards() {//will return an ArrayList of Card objects = a list of cards
-        return deckOfCards; //using get to retrieve the value of a private instance variable
-    }                       //Encapsulation - deckOfCards is protected - can only be accessed directly within the
-                            // CardGame class. To allow other parts of the program to get the deck (without modifying
-                            // it directly), we use a getter method getDeck().
-                            // By using a getter method - controlled access to the deckOfCards, while keeping it
-                            // encapsulated inside the class.
+        return deckOfCards;
+    }
 
     //Deal a card from the deck
     public Card dealCard() {
@@ -52,7 +48,7 @@ public class CardGame { //defines the instance vars - what we need for our deck 
 
     }
 
-    //Sort deck into suits - using method references
+    //Sort deck into suits - using method references and comparator
     public void sortDeckIntoSuits() {
         deckOfCards.sort(Comparator.comparing(Card::getSuit).thenComparingInt(Card::getValue));
     }
