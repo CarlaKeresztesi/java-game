@@ -3,7 +3,6 @@ package org.example;
 import java.util.Scanner;
 
 public class Snap extends CardGame {
-
     private Scanner scanner;
     private Card previousCard;
     private Player player1, player2;
@@ -11,7 +10,7 @@ public class Snap extends CardGame {
     private boolean gameOver;
 
 
-    public Snap() { //constructor overloading
+    public Snap(Player player1, Player player2) { //constructor overloading
         super(); //calling the constructor of the parent class - CardGame
         this.player1 = player1;
         this.player2 = player2;
@@ -40,6 +39,11 @@ public class Snap extends CardGame {
 
             scanner.nextLine();//method of Scanner class that reads an entire line of text from console until the user
                                                                         //presses Enter
+            if (getDeckOfCards().isEmpty()) {
+                System.out.println("No more cards left in the deck! Using cards in hand.");
+                shuffleDeck();//re-shuffle the discarded cards back into the deck
+            }
+
             Card currentCard = dealCard();
             System.out.println("The current card is: " + currentCard);
 
@@ -73,5 +77,8 @@ public class Snap extends CardGame {
 
         }//end of while loop
 
+
+
     }//end of playSnap()
+
 }//end of Snap class

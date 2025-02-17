@@ -43,6 +43,11 @@ public class Main {
 //        Snap snapGame = new Snap(); //instance of Snap
 //        snapGame.playSnap(); //calling the method
 
+        Player player1 = new Player("Player 1");
+        Player player2 = new Player("Player 2");
+
+        Snap snapGame = new Snap(player1, player2);
+        snapGame.playSnap();
 
 
 
