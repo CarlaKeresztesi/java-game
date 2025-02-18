@@ -1,4 +1,5 @@
-# ♠️♥️♦️♣️ Snap card game ♠️♥️♦️♣️
+<h1 style="text-align: center;">♠️♥️♦️♣️ Snap card game ♠️♥️♦️♣️</h1>
+
 
 
 ## Overview
@@ -121,4 +122,6 @@ order to win. <br> If they don’t type it in time, they lose.
 
 Contributions and feedback are welcome! Hope you enjoy the game as much as I did working on it!
 
+
+<img src="signature.png" alt="signature" width="150" style="display:block; margin:auto;"/>
 
