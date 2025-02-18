@@ -6,7 +6,7 @@ public class Player {
 
         public Player(String name) {//constructor
             this.name = name;
-            this.isPlaying = false;//to be set when game starts
+            this.isPlaying = false;
         }
 
          public String getName() {//getter

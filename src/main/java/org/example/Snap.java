@@ -10,11 +10,11 @@ public class Snap extends CardGame {
 
 
     public Snap(Player player1, Player player2) { //constructor overloading
-        super(); //calling the constructor of the parent class - CardGame
+        super();
         this.player1 = player1;
         this.player2 = player2;
-        shuffleDeck(); //calling this method from CardGame when the game starts
-        previousCard = null; //as we are starting the game, there is no previous card so setting it to null
+        shuffleDeck();
+        previousCard = null;
         gameOver = false;
         this.isPlayerOneTurn = true;
 
@@ -35,8 +35,8 @@ public class Snap extends CardGame {
             currentPlayer.setPlaying(true);
             System.out.println("\n " + currentPlayer.getName() + " is playing!\uD83E\uDE84 Press Enter to deal a card");
 
-            scanner.nextLine();//method of Scanner class that reads an entire line of text from console until the user
-                                                                        //presses Enter
+            scanner.nextLine();
+
             if (getDeckOfCards().isEmpty()) {
                 System.out.println("No more cards left in the deck! Using cards in hand.");
                 shuffleDeck();//re-shuffle the discarded cards back into the deck
@@ -48,10 +48,10 @@ public class Snap extends CardGame {
             if (previousCard != null && currentCard.getSymbol().equals(previousCard.getSymbol())) {
                 System.out.println("\n\uD83E\uDEF0Snap!\uD83E\uDEF0 " + currentPlayer.getName() + ", type 'snap' within 2 seconds to win the game!");
 
-                long startTime = System.currentTimeMillis();//start timer
+                long startTime = System.currentTimeMillis();
                 String userInput = "";
 
-                while (System.currentTimeMillis() - startTime <= 2000) { //waits for user to input text in 2secs
+                while (System.currentTimeMillis() - startTime <= 2000) {
                     if (scanner.hasNextLine()) {
                         userInput = scanner.nextLine();
                         break;
@@ -76,8 +76,8 @@ public class Snap extends CardGame {
                 System.out.println("No Snap! Game continues... \uD83E\uDE84");
 
                 //update previousCard for the next turn:
-                previousCard = currentCard; //store the current card as previous for next turn
-                isPlayerOneTurn = !isPlayerOneTurn; //switch to player2
+                previousCard = currentCard;
+                isPlayerOneTurn = !isPlayerOneTurn;
             }
 
         }//end of while loop
